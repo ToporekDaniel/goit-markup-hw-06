@@ -386,10 +386,50 @@
           </li>
         </ul>
       </div>
+      <div class="newsletter">
+        <form class="newsletter-form" name="newsletter-subscription" autocomplete="on" validate>
+          <label class="newsletter-label">
+            Subscribe
+            <input type="email" name="newsletter-email" placeholder="E-mail" />
+          </label>
+          <button type="submit">Subscribe
+            <svg class="subscribe-icon">
+              <use href="./images/icons.svg#icon-subscribe-icon"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
     </div>
   </footer>
   <div class=" backdrop is-hidden" data-modal>
     <div class="modal-box">
+      <p>Leave your contacts and we will call you back</p>
+
+      <form class="client-contact small-text" action="#">
+        <div>
+          <label for="client-name">Name</label>
+          <input type="text" name="client-name" id="client-name" class="short">
+        </div>
+        <div>
+          <label for="client-phone">Phone</label>
+          <input type="tel" name="client-phone" id="client-phone">
+        </div>
+        <div>
+          <label for="client-email">Email</label>
+          <input type="email" name="client-email" id="client-email">
+        </div>
+        <div>
+          <label for="comment">Comment</label>
+          <input type="text" name="comment" id="comment" placeholder="Text input">
+        </div>
+        <div class="policy-box">
+          <input type="checkbox" name="policy" id="policy">
+          <label for="policy">I accept the terms and conditions of the <a href="">Privacy
+              Policy</a> </label>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+
       <button class="modal-close-button" type="modal-close" data-modal-close>
         <svg class="modal-close-icon">
           <use href="./images/icons.svg#icon-close-sign"></use>
@@ -402,3 +442,12 @@
 </body>
 
 </html>
+<!-- 
+<form action="#" class="example-form" method="post" name="example-form">
+  <label for="username">Nazwa użytkownika</label>
+  <input type="text" name="username" id="username" placeholder="Tadeusz Kościuszko" required />
+  <label for="email">Adres e-mail</label>
+  <input type="email" name="email" id="email" placeholder="akosciuszko@equality-hero.com" required />
+  <hr />
+  <button type="submit">Wyślij</button>
+</form> -->
