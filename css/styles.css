@@ -184,8 +184,16 @@ footer {
   height: 40px;
   gap: 16px;
   border-radius: 4px;
+  border: 1px solid var(--iris);
   background: var(--iris, #4d5ae5);
   color: var(--white);
+  transition: var(--transition);
+}
+
+.newsletter-form button:hover,
+.newsletter-form button :focus {
+  background: var(--ocean);
+  border: 1px solid var(--ocean);
 }
 
 .subscribe-icon {
@@ -668,6 +676,7 @@ footer {
 .client-contact {
   display: flex;
   flex-direction: column;
+  width: 360px;
   gap: 8px;
   margin-top: 16px;
 }
@@ -676,31 +685,62 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  position: relative;
 }
 
 .client-contact input:not([type="checkbox"]),
-.client-contact select,
 .client-contact textarea {
-  display: block;
-  width: 360px;
   height: 40px;
+  transition: var(--transition);
 }
 
 #comment {
   min-height: 120px;
+  justify-content: center;
 }
 
 .client-contact button {
-  display: inline-flex;
+  margin: 24px auto 0 auto;
   padding: 16px 32px;
   border-radius: 4px;
-  border: transparent;
+  border: none;
   background: var(--iris);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  width: fit-content;
 
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.64px;
   color: var(--white, #fff);
+
+  transition: var(--transition);
+}
+
+.client-contact button:hover,
+.client-contact button:focus {
+  background: var(--ocean);
+}
+
+.client-contact button span {
+  display: block;
+  width: 108px;
+}
+
+.modal-box form .policy-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-icon {
+  position: absolute;
+  width: 18px;
+  height: 24px;
+  inset: auto 0 8px 16px;
+}
+
+.modal-icon-name {
+  height: 18px;
+  padding: 3px 0;
 }

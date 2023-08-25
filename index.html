@@ -401,33 +401,44 @@
       </div>
     </div>
   </footer>
+
+
   <div class=" backdrop is-hidden" data-modal>
     <div class="modal-box">
       <p>Leave your contacts and we will call you back</p>
 
       <form class="client-contact small-text" action="#">
         <div>
+          <svg class="modal-icon ">
+            <use class="modal-icon-name" href="./images/icons.svg#icon-modal-name"></use>
+          </svg>
           <label for="client-name">Name</label>
-          <input type="text" name="client-name" id="client-name" class="short">
+          <input type="text" name="client-name" id="client-name" required>
         </div>
         <div>
+          <svg class="modal-icon">
+            <use href="./images/icons.svg#icon-modal-phone"></use>
+          </svg>
           <label for="client-phone">Phone</label>
-          <input type="tel" name="client-phone" id="client-phone">
+          <input type="tel" name="client-phone" id="client-phone" required>
         </div>
         <div>
+          <svg class="modal-icon">
+            <use href="./images/icons.svg#icon-modal-email"></use>
+          </svg>
           <label for="client-email">Email</label>
-          <input type="email" name="client-email" id="client-email">
+          <input type="email" name="client-email" id="client-email" required>
         </div>
         <div>
           <label for="comment">Comment</label>
-          <input type="text" name="comment" id="comment" placeholder="Text input">
+          <input type="text" name="comment" id="comment" placeholder="Text input" required>
         </div>
         <div class="policy-box">
-          <input type="checkbox" name="policy" id="policy">
+          <input type="checkbox" name="policy" id="policy" required>
           <label for="policy">I accept the terms and conditions of the <a href="">Privacy
               Policy</a> </label>
         </div>
-        <button type="submit">Send</button>
+        <button type="submit"><span>Send</span></button>
       </form>
 
       <button class="modal-close-button" type="modal-close" data-modal-close>
