@@ -409,34 +409,46 @@
 
       <form class="client-contact small-text" action="#">
         <div>
-          <svg class="modal-icon ">
-            <use class="modal-icon-name" href="./images/icons.svg#icon-modal-name"></use>
-          </svg>
           <label for="client-name">Name</label>
-          <input type="text" name="client-name" id="client-name" required>
+          <div class="modal-icon-box">
+            <input type="text" name="client-name" id="client-name" pattern="^[A-Za-z\s\-']{1,50}$" required>
+            <svg class="modal-icon ">
+              <use class="modal-icon-name" href="./images/icons.svg#icon-modal-name"></use>
+            </svg>
+          </div>
         </div>
         <div>
-          <svg class="modal-icon">
-            <use href="./images/icons.svg#icon-modal-phone"></use>
-          </svg>
           <label for="client-phone">Phone</label>
-          <input type="tel" name="client-phone" id="client-phone" required>
+          <div class="modal-icon-box">
+            <input type="tel" name="client-phone" id="client-phone" pattern="^\d{9,15}$" required>
+            <svg class="modal-icon">
+              <use href="./images/icons.svg#icon-modal-phone"></use>
+            </svg>
+          </div>
         </div>
         <div>
-          <svg class="modal-icon">
-            <use href="./images/icons.svg#icon-modal-email"></use>
-          </svg>
           <label for="client-email">Email</label>
-          <input type="email" name="client-email" id="client-email" required>
+          <div class="modal-icon-box">
+            <input type="email" name="client-email" id="client-email" required>
+            <svg class="modal-icon">
+              <use href="./images/icons.svg#icon-modal-email"></use>
+            </svg>
+          </div>
         </div>
-        <div>
+        <div class="comment">
           <label for="comment">Comment</label>
-          <input type="text" name="comment" id="comment" placeholder="Text input" required>
+          <input type="text" name="comment" id="comment" placeholder="Text input">
         </div>
         <div class="policy-box">
           <input type="checkbox" name="policy" id="policy" required>
+          <div class="checkbox">
+            <svg class="checkbox-icon">
+              <use href="./images/icons.svg#icon-checkbox-click"></use>
+            </svg>
+          </div>
           <label for="policy">I accept the terms and conditions of the <a href="">Privacy
-              Policy</a> </label>
+              Policy</a>
+          </label>
         </div>
         <button type="submit"><span>Send</span></button>
       </form>
@@ -453,12 +465,3 @@
 </body>
 
 </html>
-<!-- 
-<form action="#" class="example-form" method="post" name="example-form">
-  <label for="username">Nazwa użytkownika</label>
-  <input type="text" name="username" id="username" placeholder="Tadeusz Kościuszko" required />
-  <label for="email">Adres e-mail</label>
-  <input type="email" name="email" id="email" placeholder="akosciuszko@equality-hero.com" required />
-  <hr />
-  <button type="submit">Wyślij</button>
-</form> -->

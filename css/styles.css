@@ -582,8 +582,6 @@ footer {
   transition: var(--transition);
 }
 
-/* fill="#8e8f99" style="fill: var(--color3, #8e8f99)"  kolor ikon klienta*/
-
 .backdrop {
   position: fixed;
   display: flex;
@@ -685,18 +683,31 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.modal-icon-box {
   position: relative;
 }
 
 .client-contact input:not([type="checkbox"]),
 .client-contact textarea {
   height: 40px;
+  padding-left: 38px;
+  border-radius: 4px;
+  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
   transition: var(--transition);
 }
 
-#comment {
-  min-height: 120px;
-  justify-content: center;
+.client-contact input:focus,
+.client-contact textarea:focus {
+  border: 1px solid var(--iris);
+  outline: none;
+}
+
+.client-contact .comment input {
+  height: 120px;
+  padding: 8px 16px;
+  text-align: start;
 }
 
 .client-contact button {
@@ -731,6 +742,9 @@ footer {
 .modal-box form .policy-box {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  position: relative;
+  gap: 8px;
 }
 
 .modal-icon {
@@ -738,9 +752,41 @@ footer {
   width: 18px;
   height: 24px;
   inset: auto 0 8px 16px;
+  fill: var(--navyblue);
+  transition: var(--transition);
 }
 
 .modal-icon-name {
   height: 18px;
   padding: 3px 0;
+}
+
+.modal-icon-box input:focus + svg.modal-icon,
+.modal-icon-box textarea:focus + svg.modal-icon {
+  fill: var(--iris);
+}
+
+.policy-box input {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  z-index: 10;
+  opacity: 0;
+}
+
+.checkbox {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--navyblue-modal);
+  border-radius: 2px;
+}
+
+.policy-box input:checked + .checkbox svg {
+  opacity: 1;
+}
+
+.checkbox-icon {
+  opacity: 0;
+  transition: var(--transition);
 }
