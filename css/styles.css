@@ -707,6 +707,7 @@ footer {
 .client-contact .comment textarea {
   height: 120px;
   padding: 8px 16px;
+  resize: none;
 }
 
 .client-contact button {
