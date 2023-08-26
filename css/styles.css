@@ -704,10 +704,9 @@ footer {
   outline: none;
 }
 
-.client-contact .comment input {
+.client-contact .comment textarea {
   height: 120px;
   padding: 8px 16px;
-  text-align: start;
 }
 
 .client-contact button {
